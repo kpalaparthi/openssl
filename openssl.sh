@@ -1,9 +1,9 @@
 #!/bin/bash
 for i in `cat test`
 do
-t1=`openssl s_client -connect $i:443 -tls1| openssl x509 -noout -dates&"
-t1_1=`openssl s_client -connect $i:443 -tls1_1| openssl x509 -noout -dates&"
-t1_2=`openssl s_client -connect $i:443 -tls1_2| openssl x509 -noout -dates&"
+t1=`openssl s_client -connect $i:443 -tls1| openssl x509 -noout -dates&`
+t1_1=`openssl s_client -connect $i:443 -tls1_1| openssl x509 -noout -dates&`
+t1_2=`openssl s_client -connect $i:443 -tls1_2| openssl x509 -noout -dates&`
 
 if [ -z $t1 ]
 then 
